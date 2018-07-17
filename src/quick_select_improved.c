@@ -20,9 +20,10 @@ l = 1;
   A[0] = pivot;
   for(i = 1; i < n; i++){
     if(A[i] < pivot){
-      int x = A[l];
-      A[l] = A[i];
-      A[i] = x;
+      int x = A[i];
+      A[i] = A[j];
+      A[j] = A[l];
+      A[l] = x;
       l++;
       j++;
     }
